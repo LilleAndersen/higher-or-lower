@@ -1,5 +1,3 @@
-upScores() // Updates scores
-
 // Sets number 1 and 2 for use in higher or lower guess and answer. 1 is the number you're going to guess on, 2 is the correct answer.
 let rndInt1 = randomIntFromInterval(1, 13)
 let rndInt2 = randomIntFromInterval(1, 13)
@@ -10,7 +8,8 @@ let customUsr = localStorage[''];
 customUsr = localStorage['localUsr4'] || '';
 let score = 0
 let highscore = localStorage[usr] || '0'; // Loads variable from localStorage via name of item in localStorage (profile) || means or.
-console.log(highscore)
+
+upScores() // Updates scores
 
 // Updates values on page
 document.querySelector("#score").textContent=score;
@@ -19,6 +18,7 @@ document.querySelector("#default-profile").textContent=usr;
 document.querySelector("#profile4").textContent=customUsr;
 document.querySelector("#number1").textContent=rndInt1;
 document.querySelector("#name").value = localStorage['localUsr4'] || '';
+document.querySelector('#highscore-profile4-name').textContent = localStorage['localUsr4'] || " ";
 
 console.log("Number one is " + rndInt1, "and Number two is " + rndInt2) // Logs the two numbers for testing
 
@@ -62,6 +62,7 @@ function newUsr() {
     customUsr = document.querySelector("#name").value
     if (customUsr.length >= 1) {
         document.querySelector("#profile4").textContent = customUsr;
+        document.querySelector("#highscore-profile4-name").textContent = customUsr;
         localStorage['localUsr4'] = customUsr;
     }
 }
@@ -71,6 +72,9 @@ function upScores() {
     for (let i = 1; i < 4; i++) {
         document.querySelector(`#highscore-profile${i}`).textContent = localStorage[`localUsr${i}`] || "0";
     }
+    document.querySelector('#highscore-profile4').textContent = localStorage[customUsr] || '0';
+    document.querySelector('#score').textContent = "0";
+    document.querySelector('#highscore').textContent = localStorage[usr];
 }
 
 // Checks if the guess given is the right answer, compares result with right or wrong. Uses function statements.
@@ -137,7 +141,11 @@ if (localStorage['dontShowState'] === 'true') {
 // Hides popup
 function popup() {
     document.querySelector("#popup-wrapper").style.display="none";
+    upScores()
     newUsr();
+    document.querySelector('#highscore').textContent = localStorage[usr];
+    document.querySelector('#highscore-profile4').textContent = localStorage[customUsr] || '0';
+
 }
 
 //============================================ Other JS Shit
