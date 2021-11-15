@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="flex">
-        <h1>Higher or Lower than</h1>
+        <h1 id="title">Higher or Lower than</h1>
         <div class="score">
             <h1>Score</h1>
             <h1 id="score"></h1>
@@ -18,15 +18,17 @@
         </div>
 
         <!-- Profile list/ Profile selection -->
-        <div class="profile-list">
+        <div class="right-side-column">
             <h1>Current Profile:</h1>
             <h1 id="default-profile">localUsr1</h1>
             <hr>
             <h1>All Profiles:</h1>
-            <h1 class="profiles" id="profile1" onclick="changeProfile('localUsr1')">localUsr1</h1>
-            <h1 class="profiles" id="profile2" onclick="changeProfile('localUsr2')">localUsr2</h1>
-            <h1 class="profiles" id="profile3" onclick="changeProfile('localUsr3')">localUsr3</h1>
-            <h1 class="profiles" id="profile4" onclick="changeProfile('localUsr4')"></h1>
+            <div id="profile-list">
+                <h1 class="profiles" id="profile1" onclick="changeProfile('localUsr1')">localUsr1</h1>
+                <h1 class="profiles" id="profile2" onclick="changeProfile('localUsr2')">localUsr2</h1>
+                <h1 class="profiles" id="profile3" onclick="changeProfile('localUsr3')">localUsr3</h1>
+                <h1 class="profiles" id="profile4" onclick="changeProfile('localUsr4')"></h1>
+            </div>
             <hr>
 
             <!-- Score table -->
@@ -84,7 +86,7 @@
                     If you click any of the different profile in the "All profiles" section, you can switch your profile.
                 </p>
                 <label for="dontShow"> Don't show again <input type="checkbox" id="dontShow" name="dontShow" value="dontShow" onchange="changeShowState()"></label>
-                <label for="name">Custom Username: <input type="text" id="name" name="name"></label>
+                <label for="name">Custom Username: <input type="text" id="name" name="name" maxlength="8"></label>
                 <a class="btn" onclick="popup()">OK</a>
             </div>
         </div>

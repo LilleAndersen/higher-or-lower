@@ -16,13 +16,24 @@ body
     flex-direction:column;
 }
 
+#title
+{
+    margin-top: 100px;
+}
+
+h2
+{
+    font-size: 50px;
+    margin: 0;
+}
+
 // Container styling
 #container-cards
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap: 50px;
     margin-top:25px;
     user-select: none;
 }
@@ -37,7 +48,8 @@ body
     height: 400px;
     border-radius:2rem;
     text-align:center;
-    font-size: 25px;
+    font-size: 40px;
+    font-weight: 700;
 
     &:hover
     {
@@ -77,13 +89,27 @@ body
 }
 
 // Profile list styling
-.profile-list
+.right-side-column
 {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
     margin: 25px;
     text-align: right;
+
+    h1
+    {
+        margin: 10px;
+    }
+
+    hr
+    {
+        width: 250px;
+        border-radius: 10000000000px;
+        border-color: rebeccapurple;
+    }
 }
 
 .profiles
@@ -92,12 +118,28 @@ body
     background-color: #9184d5;
     border-radius: 25px;
     text-align: center;
+    font-size: 20px;
+    width: 85px;
 
     &:hover
     {
         cursor: pointer;
     }
 }
+
+#default-profile {
+    font-size: 30px;
+}
+
+#profile-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    justify-content: flex-end;
+    max-width: 250px;
+}
+
 
 // Table styling
 table {
