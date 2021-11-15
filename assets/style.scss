@@ -36,6 +36,8 @@ h2
     gap: 50px;
     margin-top:25px;
     user-select: none;
+    color: #B5AED6;
+    text-shadow: 0 0 5rem rgba(black, .01);
 }
 
 // Card styling w/ hover styling
@@ -46,10 +48,11 @@ h2
     background: rebeccapurple;
     width: 250px;
     height: 400px;
-    border-radius:2rem;
-    text-align:center;
+    border-radius: 2rem;
+    text-align: center;
     font-size: 40px;
     font-weight: 700;
+    box-shadow: 0 0 10rem rgba(black, .2);
 
     &:hover
     {
@@ -120,6 +123,7 @@ h2
     text-align: center;
     font-size: 20px;
     width: 85px;
+    margin: 0 !important;
 
     &:hover
     {
@@ -136,8 +140,10 @@ h2
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 10px;
+    row-gap: 10px;
     justify-content: flex-end;
     max-width: 250px;
+    margin: 15px 0;
 }
 
 
