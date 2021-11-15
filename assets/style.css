@@ -67,6 +67,12 @@ body {
   text-align: right;
 }
 
+.profiles {
+  padding: 15px;
+  background-color: #9184d5;
+  border-radius: 25px;
+  text-align: center;
+}
 .profiles:hover {
   cursor: pointer;
 }
