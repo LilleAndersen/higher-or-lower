@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Stylesheet link -->
+</head>
+<body>
+    <div id="flex">
+        <h1>Higher or Lower than</h1>
+        <div class="score">
+            <h1>Score</h1>
+            <h1 id="score"></h1>
+        </div>
+        <div class="highscore">
+            <h1>Highscore</h1>
+            <h1 id="highscore"></h1>
+        </div>
+
+        <!-- Profile list/ Profile selection -->
+        <div class="profile-list">
+            <h1>Current Profile:</h1>
+            <h1 id="default-profile">localUsr1</h1>
+            <hr>
+            <h1>All Profiles:</h1>
+            <h1 class="profiles" id="profile1" onclick="changeProfile('localUsr1')">localUsr1</h1>
+            <h1 class="profiles" id="profile2" onclick="changeProfile('localUsr2')">localUsr2</h1>
+            <h1 class="profiles" id="profile3" onclick="changeProfile('localUsr3')">localUsr3</h1>
+            <h1 class="profiles" id="profile4" onclick="changeProfile('localUsr4')"></h1>
+            <hr>
+
+            <!-- Score table -->
+            <table>
+                <tr>
+                    <th>Score</th>
+                    <th>Profile</th>
+                </tr>
+                <tr>
+                    <td id="highscore-profile1"></td>
+                    <td>localUsr1</td>
+                </tr>
+                <tr>
+                    <td id="highscore-profile2"></td>
+                    <td>localUsr2</td>
+                </tr>
+                <tr>
+                    <td id="highscore-profile3"></td>
+                    <td>localUsr3</td>
+                </tr>
+            </table>
+        </div>
+        <h2 id="number1"></h2>
+
+        <!-- Container with guessing cards -->
+        <div id="container-cards">
+            <div class="cards" onclick="resolve(rndInt1 <= rndInt2)">
+                <p>Higher</p>
+            </div>
+            <div class="cards" onclick="resolve(rndInt1 >= rndInt2)">
+                <p>Lower</p>
+            </div>
+        </div>
+        <div>
+            <h1 id="result">Your face is wrong</h1>
+        </div>
+
+        <!-- Rules button and rules section -->
+        <a id="info" class="btn" onclick="showRules()">Rules</a> <!-- onClick shows rules section. -->
+        <div id="popup-wrapper">
+            <div id="popup">
+                <p id="popup-info">
+                    1. Guess if the next number is higher or lower then the previous.
+                    <br>
+                    2. The number range from 1-14 (like a regular deck of cards).
+                    <br>
+                    3. The number to guess on is under the headline.
+                    <br>
+                    4. If the next and current numbers are the same points are given either way.
+                    <br>
+                    If you click any of the different profile in the "All profiles" section, you can switch your profile.
+                </p>
+                <label for="dontShow"> Don't show again <input type="checkbox" id="dontShow" name="dontShow" value="dontShow" onchange="changeShowState()"></label>
+                <label for="name">Custom Username: <input type="text" id="name" name="name"></label>
+                <a class="btn" onclick="popup()">OK</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- TODO: make local leaderboard (mrcat idea), different users can have different names / profiles and scores are associated with them-->
+
+<!-- Script imports / jQuery and game-->
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="game.js"></script>
+
+</html>

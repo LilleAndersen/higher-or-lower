@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap'); // Font import
+
+// Body styling
+body
+{
+  background: #B5AED6;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+// Flex styling
+#flex
+{
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+}
+
+// Container styling
+#container-cards
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+  margin-top:25px;
+  user-select: none;
+}
+
+// Card styling w/ hover styling
+.cards
+{
+  display:grid;
+  place-items:center;
+  background: rebeccapurple;
+  width: 250px;
+  height: 400px;
+  border-radius:2rem;
+  text-align:center;
+  font-size: 25px;
+
+  &:hover
+  {
+    cursor: pointer;
+  }
+}
+
+// Result styling
+#result
+{
+  margin-top: 100px;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+// Score styling
+.score
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px;
+}
+
+// Highscore styling
+.highscore
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 150px 25px;
+  text-align: left;
+}
+
+// Profile list styling
+.profile-list
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  text-align: right;
+}
+
+.profiles
+{
+  &:hover
+  {
+    cursor: pointer;
+  }
+}
+
+// Table styling
+table {
+  width: 100%;
+  text-align: right;
+  border-collapse: collapse;
+}
+
+// Table rows styling
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+// Odd even styling
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+// Info styling
+#info
+{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  margin: 25px;
+}
+
+// Popup wrapper styling
+#popup-wrapper
+{
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(black,.5);
+  backdrop-filter: blur(10px);
+}
+
+// Popup styling
+#popup
+{
+  display:grid;
+  place-items:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rebeccapurple;
+  color: white;
+
+  padding: 25px 40px;
+  border-radius: 25px;
+
+  max-width: 60ch;
+}
+
+// Btn styling
+.btn
+{
+  padding: 13px 28px;
+  margin: 5px 0 0 0;
+  background-color: white;
+  color: rebeccapurple;
+  border-radius: 15px;
+
+  &:hover
+  {
+    cursor: pointer;
+  }
+}
